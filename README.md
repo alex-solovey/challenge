@@ -2,6 +2,9 @@
 
 Implement HTTP API client and use it to query the data.
 
+**Note:** You can use online resources to lookup up framework and libraries
+documentation and usage examples, but notify what exactly you're looking for.
+
 ## API
 
 Default API base URL: https://my-json-server.typicode.com/alex-solovey/challenge
