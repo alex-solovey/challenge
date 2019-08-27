@@ -1,0 +1,16 @@
+{
+  "name": "challenge",
+  "version": "0.0.1",
+  "private": true,
+  "description": "technical challenge",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "faker": "^4.1.0"
+  },
+  "dependencies": {
+    "random": "^2.1.1"
+  }
+}
