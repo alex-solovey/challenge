@@ -4,12 +4,13 @@ const fs = require('fs')
 const faker = require('faker')
 const random = require('random')
 
-const USERS = 1000;
-const PRODUCTS = 200;
-const ORDERS = 2000;
+const USERS = 15;
+const PRODUCTS = 20;
+const ORDERS = 100;
 
-const INFLATION = 0.05;
+const INFLATION = 0.08;
 
+const MONTHS = 3;
 const MONTH = 1000 * 60 * 60 * 24 * 30;
 
 const ids = {}
@@ -74,7 +75,9 @@ const order_items_generator = random.normal(mu=5, sigma=2);
 
 const items_count_generator = random.normal(mu=3, sigma=2);
 
-for (let month = 12; month > 0; month--)
+const inflation_generator = random.normal(mu = INFLATION/12, sigma=INFLATION/12/10);
+
+for (let month = MONTHS; month > 0; month--)
 {
     let from = today - MONTH * month;
     let to = today - MONTH * (month - 1);
@@ -96,6 +99,10 @@ for (let month = 12; month > 0; month--)
         for (let i = 0; i < items_count; ++i)
         {
             let product = product_selector();
+            while (items.some((i) => i.product_id === product.id))
+            {
+                product = product_selector();
+            }
             total += product.price;
             let count = Math.floor(items_count_generator());
             count = Math.max(count, 1);
@@ -117,6 +124,15 @@ for (let month = 12; month > 0; month--)
         };
         orders.push(order);
     }
+
+    products.forEach(product => {
+        if (Math.random() > 0.5)
+        {
+            let inflation = inflation_generator();
+            console.log("month", month, "inflation for product", product, ":", inflation*100, "%");
+            product.price = parseFloat((product.price * (1 + inflation)).toFixed(2));
+        }
+    });
 }
 
 let db = {
