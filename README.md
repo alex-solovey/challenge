@@ -1,6 +1,8 @@
 # Technical Challenge
 
-Implement HTTP API client and use it to query the data.
+Implement HTTP API client and use it to query the data. Your solution
+should be a simple console application which, when run, queries API and
+outputs results to the terminal.
 
 **Note:** You can use online resources to lookup up framework and libraries
 documentation and usage examples, but notify what exactly you're looking for.
