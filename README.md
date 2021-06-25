@@ -2,7 +2,7 @@
 
 Implement HTTP API client and use it to query the data. Your solution
 should be a simple console application which, when run, queries API and
-outputs results to the terminal.
+outputs results to the terminal. *No user input is required or expected*.
 
 **Note:** You can use online resources to lookup up framework and libraries
 documentation and usage examples, but notify what exactly you're looking for.
@@ -25,8 +25,8 @@ Resources have relations:
 * Order contains multiple items: product, count and price.
 * Product may be included in multiple orders.
 
-Note: product prices change over the time. Products resource reports the current product price;
-order items include historical price of the product at the time of the order.
+**Note: product prices change over the time. Products resource reports the current product price;
+order items include historical price of the product at the time of the order.**
 
 ### Endpoints
 
@@ -44,11 +44,12 @@ Only `GET` requests are used in this challenge.
 
 ### A. Define data contract models for API endpoints
 
-Your code should be able to deserialize JSON responses into C# objects.
+Your code should be able to load and deserialize JSON responses.
 
 ### B. Implement HTTP client to retrieve data from API
 
-API client should support all endpoints listed above. API base URL should be configurable, so it should be possible to use a different URL instead of default if needed.
+API client should support all endpoints listed above. API base URL should be configurable, so it should be possible to use a different
+URL instead of default if needed.
 
 ### C. Find and output the following results:
 
