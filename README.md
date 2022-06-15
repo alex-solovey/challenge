@@ -33,11 +33,8 @@ order items include historical price of the product at the time of the order.**
 Only `GET` requests are used in this challenge.
 
 * `GET` [`/users`](https://my-json-server.typicode.com/alex-solovey/challenge/users) - get all users.
-* `GET` [`/users/{id}`](https://my-json-server.typicode.com/alex-solovey/challenge/users/71880) - get single user by ID.
 * `GET` [`/products`](https://my-json-server.typicode.com/alex-solovey/challenge/products) - get all products.
-* `GET` [`/products/{id}`](https://my-json-server.typicode.com/alex-solovey/challenge/products/90020) - get single product by ID.
 * `GET` [`/orders`](https://my-json-server.typicode.com/alex-solovey/challenge/orders) - get all orders.
-* `GET` [`/orders/{id}`](https://my-json-server.typicode.com/alex-solovey/challenge/orders/22300) - get single order by ID.
 
 
 ## Tasks
@@ -53,7 +50,7 @@ URL instead of default if needed.
 
 ### C. Find and output the following results:
 
-1. Minimum, maximum, mean and median spend (total orders amount) per user. Note: exclude users without orders.
+1. Minimum, maximum, mean and median spend (total orders amount) per average user. Note: exclude users without orders.
 2. Minimum, maximum, mean and median count and amount of orders for each month that has orders.
 3. The most popular product (the one with the highest number of items sold).
 4. The product with the highest revenue.
